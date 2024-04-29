@@ -1,0 +1,223 @@
+
+
+.Projet{
+    background: var(--bg-color);
+    min-height: auto;
+    padding-bottom: 10rem;
+}
+
+.Projet h2{
+    position: relative;
+    top: -2rem;
+}
+
+.skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 5rem;
+    padding-top:5rem ;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.projects{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.project-container{
+    width: 300px;
+    height: 300px;
+    border-radius: .6rem;
+    padding: 2.5rem;
+    background: rgb(4, 2, 17);
+    
+    z-index: 1;
+    overflow: hidden;
+    opacity: .9;
+}
+
+#image{
+    
+    object-fit: cover;
+    
+}
+#image1{
+    background: url("./Assets/image.png") repeat ;
+    /* object-fit: cover; */
+    
+}
+
+#image2{
+    background: url("./Assets/ecommerce.png") repeat;
+    object-fit: fill;
+}
+
+#image3{
+    background: url("./Assets/gestionemp.png");
+    opacity: .8;
+}
+#image4{
+    background: rgb(46, 88, 101);
+    /* opacity: .8; */
+    object-fit: fill;
+}
+
+
+
+.project-container::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20%;
+    background:var(--sc-bg-color);
+    z-index: -1;
+    transition: .5s;
+    opacity: .5;
+}
+.project-container:hover::before{
+    opacity: .9;
+    height: 70%;
+
+}
+.project-information{
+    display: flex;
+    justify-content: space-between;
+}
+.project-information a{
+    opacity: 0;
+    transition: .5s;
+    position: relative;
+    top: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.project-container:hover .project-information a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:-10rem ;
+    opacity: 1;
+    overflow: hidden;
+    transform: translatey(-10rem);
+    
+}
+
+#github{
+    width: 50px;
+    height: 50px;
+}
+.project-information p{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 23rem;
+    transition: .5s;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+
+.project-container:hover .project-information p{
+    transform: translatey(-15rem);
+    font-size: 24px;
+    text-align: center;
+    left: 1.5rem;
+    width: 100%;
+
+}
+.skills-column{
+    flex: 1 1 40rem;
+    
+}
+
+
+.title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-content{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills-content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:var(--sc-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills-content:hover::before{
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+.progress{
+    padding: 1rem 0;
+}
+.progress h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress h3 span{
+    color: var(--text-color);
+    
+}
+
+
+
+#Admin{
+    color: #fefefe;
+}
+
+.bar{
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.bar span{
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    width: var(--i);
+    background: var(--main-color);
+}
+
+@media screen and (max-width: 1122px){
+    .skills-row{
+        gap: 6rem;
+        
+    }
+}
+
